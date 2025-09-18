@@ -1,4 +1,4 @@
-import style from "./landingPage.module.css";
+import style from "./LandingPage.module.css";
 
 function LandingPage() {
   return (

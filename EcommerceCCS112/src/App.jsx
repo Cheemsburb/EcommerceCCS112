@@ -5,6 +5,7 @@ import "./App.css";
 
 //Components
 import LandingPage from "./LandingPage/LandingPage.jsx";
+
 function App() {
   const [count, setCount] = useState(0);
 
