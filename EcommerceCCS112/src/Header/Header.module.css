@@ -5,7 +5,15 @@
   width: 100%;
   background-color: antiquewhite;
   align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo and Store Name */
+.logoContainer {
+  background-color: azure;
+  display: flex;
   gap: 2rem;
+  align-items: center;
 }
 
 .logo {
@@ -17,20 +25,45 @@
   font-size: 2.5rem;
   font-family: "Italiana";
   font-weight: 700;
-  margin-right: 5rem;
+  font-size: clamp(1.8rem, 2vw, 2.5rem);
 }
 
+/* SHORTCUTS */
+.shortcutContainer {
+  background-color: azure;
+  display: flex;
+  gap: 2rem;
+}
 .shortcuts {
   font-size: 1rem;
   font-family: "Junge";
   font-weight: 400;
+  font-size: clamp(0.5rem, 2vw, 1rem);
+}
+
+/* ICONS */
+.iconsContainer {
+  display: flex;
+  gap: 2rem;
 }
 
 .icons {
-  width: 2.3rem;
-  height: 2.3rem;
+  width: 2rem;
+  height: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.icons:hover {
+  transform: scale(1.25);
+  cursor: pointer;
 }
 
 .spacer {
-  width: 10%;
+  flex-grow: 1;
+}
+
+@media (max-width: 1050px) {
+  .shortcuts {
+    display: none;
+  }
 }
