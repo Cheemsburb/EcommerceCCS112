@@ -3,14 +3,16 @@
   flex-direction: row;
   height: 15vh;
   width: 100%;
-  background-color: antiquewhite;
+  background-color: #ccba96;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 /* Logo and Store Name */
 .logoContainer {
-  background-color: azure;
   display: flex;
   gap: 2rem;
   align-items: center;
@@ -30,7 +32,6 @@
 
 /* SHORTCUTS */
 .shortcutContainer {
-  background-color: azure;
   display: flex;
   gap: 2rem;
 }
@@ -39,6 +40,26 @@
   font-family: "Junge";
   font-weight: 400;
   font-size: clamp(0.5rem, 2vw, 1rem);
+}
+
+.shortcuts {
+  position: relative;
+  cursor: pointer;
+}
+
+.shortcuts::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* adjust spacing from text */
+  width: 0%;
+  height: 2px;
+  background: #000000;
+  transition: width 0.3s ease;
+}
+
+.shortcuts:hover::after {
+  width: 100%;
 }
 
 /* ICONS */
