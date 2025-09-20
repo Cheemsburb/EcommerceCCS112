@@ -1,0 +1,81 @@
+.body {
+  position: relative; /* needed for ::before positioning */
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* ensures no blur bleed outside */
+}
+
+/* background image + blur */
+.body::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0 */
+  background-image: url("../assets/Hero/cover.JPG");
+  background-size: cover; /* scales nicely for full screen */
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(3px);
+  z-index: 0; /* push behind content */
+}
+
+/* your content stays on top */
+.introductionContainer,
+.mainIntro,
+.subIntro,
+.button {
+  position: relative;
+  z-index: 1; /* ensures content is above the blurred bg */
+}
+
+.introductionContainer {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: fit-content;
+  max-width: 480px;
+  align-items: center;
+  gap: 43px;
+}
+
+.mainIntro {
+  font-family: "Kaisei Decol";
+  font-weight: 400;
+  font-size: 3rem;
+  color: #6b5724;
+  text-align: center;
+}
+
+.subIntro {
+  font-family: "Kaisei Decol";
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #8a6e26;
+  text-align: center;
+}
+
+.button {
+  height: 63px;
+  width: 200px;
+  background-color: #f1e2cd;
+  color: #6b5724;
+  font-family: "Kaisei Decol";
+  font-weight: 400;
+  font-size: 1.25rem;
+  outline: none;
+  border: none;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
