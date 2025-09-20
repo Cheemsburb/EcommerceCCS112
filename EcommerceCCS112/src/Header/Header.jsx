@@ -1,8 +1,8 @@
 import style from "./Header.module.css";
-import logo from "../assets/Header/sun.png";
-import account from "../assets/Header/user.png";
-import search from "../assets/Header/search.png";
-import bag from "../assets/Header/bag.png";
+import logo from "./assets/sun.png";
+import account from "./assets/user.png";
+import search from "./assets/search.png";
+import bag from "./assets/bag.png";
 
 function Header() {
   return (
