@@ -1,0 +1,5 @@
+Got stuck right now, i have to implement login, register and routing the right way
+I need to learn this things to continue:
+- Authentication
+- Routing
+- Tokens
